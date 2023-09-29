@@ -3,7 +3,7 @@ const router= express.Router()
 
 const profileController= require('../controller/profileController')
 const authController = require('../controller/authController')
-const jwtMiddleWare= require('../middleware/loginCheck')
+const jwtMiddleWare= require('../middleware/jwtAuthentication')
 const { imagesUpload } = require('../middleware/fileupload')
 
 

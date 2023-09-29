@@ -17,12 +17,13 @@ module.exports ={
         }
         
         const encryptedPassword= await bcrypt.hash(password,10)
-console.log(encryptedPassword);
+        console.log(encryptedPassword);
         new UserModel(
             {
                 username,
                 email,
                 password:encryptedPassword,
+                profileImage:''
                 
             }).save()
  
@@ -36,7 +37,7 @@ console.log(encryptedPassword);
     userLogin:async(req,res)=>{
         try {
             const {email,password} =req.body
-console.log(email);
+            console.log(email);
             const user= await UserModel.findOne({email})
             console.log(user);
             
